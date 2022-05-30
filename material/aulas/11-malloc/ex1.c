@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define N 12
+#define N 14
 
 int *aloca_vetor(int n) {
     int *vetor = malloc(n * sizeof(int));

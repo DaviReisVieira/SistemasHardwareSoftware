@@ -13,9 +13,14 @@ int main (int argc, char *argv[]) {
     
     scanf("%s", arq1);
     int fd1 = open(arq1, O_RDONLY);
-    for (int i = 0; i < 5; i++) {
-        read(fd1, buf, 1);
+    int j = 1;
+    while (j!=0) {
+        j = read(fd1, buf, 1);
         printf("Caracter lido: %c\n", buf[0]);
+        if (j == 0) {
+            printf("Arquivo vazio\n");
+            break;
+        }
     }
     close(fd1);
     
